@@ -5,7 +5,7 @@ include_directories(/usr/local/include)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp test/BoilerplateTestCase.cpp)
+set(SOURCE_FILES main.cpp test/cpp/BoilerplateTestCase.cpp test/cpp/BoilerplateTestCase.h)
 add_executable(CppClassTest ${SOURCE_FILES})
 
 target_link_libraries(CppClassTest /usr/local/lib/libcppunit.a)
