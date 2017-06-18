@@ -6,7 +6,7 @@ object to NodeJs.
 
 **Development Environment:** CLion
 
-**Javascript Test Framework:** Mocha
+**Javascript Test Framework:** Mocha / Chai
 
 **Cpp Test Framework:** Cppunit
 
@@ -19,3 +19,13 @@ object to NodeJs.
 * Added a .gitignore 
 * Installed cppunit with "brew install cppunit"
 * Installed node-gyp with "sudo npm install -g node-gyp"
+* In CLion, set the Javascript version to ES6 in preferences, and enabled Node and NPM
+* Created test/js directory
+  * Created package.json file with chai as dev-dependency
+  * npm install
+  * created the boilerplate test file.
+* Edited CMakeLists.txt
+  * include_directories(/usr/local/include)
+  * add_executable(CppClassTest ${SOURCE_FILES})
+  * target_link_libraries(CppClassTest /usr/local/lib/libcppunit.a)
+  
