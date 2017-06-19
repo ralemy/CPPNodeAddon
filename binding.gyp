@@ -2,8 +2,11 @@
   "targets": [
     {
       "target_name": "SampleAddOn",
-      "sources": [ "src/WrapSampleObject.cpp" , "src/SampleObject.cpp"],
-      "cflags": ["-Wall", "-std=c++11"],
+      "sources": [ "src/SampleObjectWrap.cpp" , "src/SampleObject.cpp"],
+      "include_dirs" : [
+        "<!(node -e \"require('nan')\")"
+      ],
+       "cflags": ["-Wall", "-std=c++11"],
       'xcode_settings': {
         'OTHER_CFLAGS': [
           '-std=c++11'

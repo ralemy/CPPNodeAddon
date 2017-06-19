@@ -29,5 +29,9 @@ object to NodeJs.
   * add_executable(CppClassTest ${SOURCE_FILES})
   * target_link_libraries(CppClassTest /usr/local/lib/libcppunit.a)
 * Added bindings.gyp for node-gyp
-  
+* Created package.json in root directory and installed nan with npm.
+* added NaN to the include directories of node-gyp 
+* Added test/cpp and created unit tests for the C++ Object
+* Added src directory and created the C++ object
+* Added a wrapper class for sample object (note: not in the cmake targets, because it is only used by node-gyp)
   

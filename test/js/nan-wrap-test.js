@@ -4,8 +4,14 @@
  */
 
 describe("NAN ObjectWrap test", ()=>{
-    let addon;
+    let addon, cls;
     it("should be able to require the addon", ()=>{
         addon = require("../../build/Release/SampleAddOn");
+    });
+    it("should be able to instantiate an object", ()=>{
+        cls = new addon.SampleObject("my message");
+    });
+    it("should allow for calling the constructor as a function", ()=>{
+       let ocls = addon.SampleObject("second instance");
     });
 });
