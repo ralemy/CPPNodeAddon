@@ -28,4 +28,6 @@ object to NodeJs.
   * include_directories(/usr/local/include)
   * add_executable(CppClassTest ${SOURCE_FILES})
   * target_link_libraries(CppClassTest /usr/local/lib/libcppunit.a)
+* Added bindings.gyp for node-gyp
+  
   
