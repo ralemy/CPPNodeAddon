@@ -6,8 +6,7 @@
 #define OBJECTWRAP_NAN_SAMPLEOBJECTWRAP_H
 
 #include <node/node.h>
-#include 
-#include "../node_modules/nan/nan.h"
+#include <nan.h>
 #include "SampleObject.h"
 
 using namespace Nan;
