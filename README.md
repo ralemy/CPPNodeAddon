@@ -16,10 +16,12 @@ object to NodeJs.
 
 
 ## Setting up:
-* Added a .gitignore 
-* Installed cppunit with "brew install cppunit"
-* Installed node-gyp with "sudo npm install -g node-gyp"
-* In CLion, set the Javascript version to ES6 in preferences, and enabled Node and NPM
+* Install cppunit
+    * Example, for mac: `brew install cppunit`
+* Install node-gyp and mocha with 
+    *       sudo npm install -g node-gyp
+            sudo npm install -g mocha
+* In CLion, set the Javascript version to ES6 in preferences, and enable Node and NPM
 * In ./ and ./test/js directories, run npm install.
 * Edit CMakeLists.txt
   * specify where to find node and nan include files
@@ -43,4 +45,13 @@ For example:
         test/cpp/SampleObjectTestCase.h)
 
 Contains all the objects and their tests, but not the wrapper objects (src/SampleObjectWrap.cpp and src/SampleObjectWrap.h)
+
+# Running Tests
+
+* build the project in CLion
+* For C++ tests, just run the main program (in CLion, RUN->CppClassTest)
+* For Js tests, build the project by using the command:
+    *       node-gyp configure build
+* Then Run the tests with
+    *       mocha test/js/*test.js
 
