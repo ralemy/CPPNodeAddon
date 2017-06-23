@@ -10,8 +10,8 @@ object to NodeJs.
 
 **Cpp Test Framework:** Cppunit
 
-**Tested On Mac OS 10.12.5**
-**Node version 8.1.2**
+**Tested On Mac OS 10.12.5**, 
+**Node version 8.1.2**, 
 **Cppunit version:1.14.0**
 
 
