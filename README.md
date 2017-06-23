@@ -20,18 +20,27 @@ object to NodeJs.
 * Installed cppunit with "brew install cppunit"
 * Installed node-gyp with "sudo npm install -g node-gyp"
 * In CLion, set the Javascript version to ES6 in preferences, and enabled Node and NPM
-* Created test/js directory
-  * Created package.json file with chai as dev-dependency
-  * npm install
-  * created the boilerplate test file.
-* Edited CMakeLists.txt
-  * include_directories(/usr/local/include)
-  * add_executable(CppClassTest ${SOURCE_FILES})
-  * target_link_libraries(CppClassTest /usr/local/lib/libcppunit.a)
-* Added bindings.gyp for node-gyp
-* Created package.json in root directory and installed nan with npm.
-* added NaN to the include directories of node-gyp 
-* Added test/cpp and created unit tests for the C++ Object
-* Added src directory and created the C++ object
-* Added a wrapper class for sample object (note: not in the cmake targets, because it is only used by node-gyp)
-  
+* In ./ and ./test/js directories, run npm install.
+* Edit CMakeLists.txt
+  * specify where to find node and nan include files
+    *     include_directories(/usr/local/include ./node_modules/nan) 
+  * Rename the executable because main is going to run tests
+    *     add_executable(CppClassTest ${SOURCE_FILES})
+  * Add the cpp unit test link library to the target:
+    *     target_link_libraries(CppClassTest /usr/local/lib/libcppunit.a)
+
+**Note**: when adding source files, the wrapper files should not be added to 
+CMakeLists.txt, but the cpp unit test files should be added. 
+
+For example: 
+               
+    set(SOURCE_FILES main.cpp \
+        src/SampleObject.cpp \
+        src/SampleObject.h \
+        test/cpp/BoilerplateTestCase.cpp \
+        test/cpp/BoilerplateTestCase.h \
+        test/cpp/SampleObjectTestCase.cpp \
+        test/cpp/SampleObjectTestCase.h)
+
+Contains all the objects and their tests, but not the wrapper objects (src/SampleObjectWrap.cpp and src/SampleObjectWrap.h)
+

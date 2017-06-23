@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.7)
 project(ObjectWrap_Nan)
 
-include_directories(/usr/local/include)
+include_directories(/usr/local/include ./node_modules/nan)
 
 set(CMAKE_CXX_STANDARD 11)
 

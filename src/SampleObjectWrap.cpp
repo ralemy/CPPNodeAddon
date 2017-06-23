@@ -13,7 +13,7 @@ NAN_MODULE_INIT(SampleObjectWrap::Init) {
     tpl->SetClassName(Nan::New<v8::String>("SampleObject").ToLocalChecked());
     tpl->InstanceTemplate()->SetInternalFieldCount(1);
 
-    SetPrototypeMethod(tpl, "SampleMethod", SampleObjectWrap::sampleMethod);
+    SetPrototypeMethod(tpl, "sampleMethod", SampleObjectWrap::sampleMethod);
 
     v8::Local<v8::ObjectTemplate> itpl = tpl->InstanceTemplate();
 
@@ -29,8 +29,7 @@ NAN_MODULE_INIT(SampleObjectWrap::Init) {
 NAN_METHOD(SampleObjectWrap::New) {
     if(info.IsConstructCall()){
         std::string arg(info[0]->IsUndefined() ? "" : *v8::String::Utf8Value(info[0]->ToString()));
-        SampleObjectWrap *w = new SampleObjectWrap(arg);
-        w->Wrap(info.This());
+        (new SampleObjectWrap(arg))->Wrap(info.This());
         info.GetReturnValue().Set(info.This());
     }
     else{
