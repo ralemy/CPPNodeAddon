@@ -50,8 +50,6 @@ Contains all the objects and their tests, but not the wrapper objects (src/Sampl
 
 * build the project in CLion
 * For C++ tests, just run the main program (in CLion, RUN->CppClassTest)
-* For Js tests, build the project by using the command:
-    *       node-gyp configure build
-* Then Run the tests with
-    *       mocha test/js/*test.js
+* For Js tests, build and test the project by using the command:
+    *       npm test
 

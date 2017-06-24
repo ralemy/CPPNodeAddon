@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "test": "mocha test/js/*test.js"
+    "test": "node-gyp configure build && mocha test/js/*test.js"
   },
   "dependencies": {
     "nan": "^2.6.2"
