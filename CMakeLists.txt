@@ -4,7 +4,7 @@ project(ObjectWrap_Nan)
 
 set(CMAKE_CXX_STANDARD 11)
 
-file(GLOB SOURCES src/*.cpp src/*.h test/cpp/*.cpp test/cpp/*.h)
+file(GLOB SOURCES main.cpp src/*.cpp src/*.h test/cpp/*.cpp test/cpp/*.h)
 
 include_directories(/usr/local/include ./node_modules/nan)
 

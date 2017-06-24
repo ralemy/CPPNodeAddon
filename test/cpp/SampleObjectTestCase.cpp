@@ -11,6 +11,7 @@ void SampleObjectTestCase::setUp() {
 
 void SampleObjectTestCase::tearDown() {
     delete referenceObject;
+    referenceObject = NULL;
 }
 
 void SampleObjectTestCase::testSampleMethod() {
