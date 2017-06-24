@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "test": "mocha test/js/*test.js"
+  },
   "dependencies": {
     "nan": "^2.6.2"
   }
