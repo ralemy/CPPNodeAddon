@@ -7,7 +7,7 @@
 
 #include <node/node.h>
 #include <nan.h>
-#include "SampleObject.h"
+#include "../src/SampleObject.h"
 
 using namespace Nan;
 

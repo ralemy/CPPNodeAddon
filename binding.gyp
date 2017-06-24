@@ -2,7 +2,7 @@
   "targets": [
     {
       "target_name": "SampleAddOn",
-      "sources": [ "src/SampleObjectWrap.cpp" , "src/SampleObject.cpp"],
+      "sources": [ "NodeWrap/SampleObjectWrap.cpp" , "src/SampleObject.cpp"],
       "include_dirs" : [
         "<!(node -e \"require('nan')\")"
       ],
